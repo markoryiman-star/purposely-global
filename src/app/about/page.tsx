@@ -1,25 +1,10 @@
+import Navbar from "@/components/navbar";
 import Link from "next/link";
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <header className="border-b border-slate-200">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <Link
-            href="/"
-            className="text-xl font-extrabold tracking-tight text-emerald-900"
-          >
-            PURPOSELY
-          </Link>
-
-          <Link
-            href="/"
-            className="text-sm font-semibold text-emerald-800 hover:text-emerald-600"
-          >
-            Back to home
-          </Link>
-        </nav>
-      </header>
+      <Navbar />
 
       <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <p className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-800">

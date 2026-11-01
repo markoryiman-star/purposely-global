@@ -34,34 +34,48 @@ export default async function DashboardPage() {
   return (
     <main className="min-h-screen bg-slate-50">
 
-    
-<header className="flex w-full items-center justify-between border-b border-slate-200 bg-white px-6 py-4 sm:px-8">
-  <Link
-    href="/"
-    aria-label="PURPOSELY Global homepage"
-    className="flex shrink-0 items-center"
-  >
-    <Image
-      src="/purposely-logo.png"
-      alt="PURPOSELY Global logo"
-      width={180}
-      height={60}
-      priority
-      className="h-12 w-auto object-contain"
-    />
-  </Link>
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white">
+     <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
 
-  <LogoutButton />
-</header>
+     {/* PURPOSELY Global branding */}
+     <Link
+      href="/"
+      aria-label="PURPOSELY Global homepage"
+      className="flex min-w-0 shrink-0 items-center gap-3"
+      >
+      <Image
+        src="/purposely-logo.png"
+        alt="PURPOSELY logo"
+        width={56}
+        height={56}
+        priority
+        className="h-12 w-12 shrink-0 object-contain"
+      />
 
+      <div className="flex flex-col justify-center">
+        <span className="text-base font-extrabold leading-tight tracking-wide text-emerald-950 sm:text-lg">
+          PURPOSELY
+        </span>
 
+        <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-slate-500 sm:text-xs">
+          Global
+        </span>
+      </div>
+    </Link>
 
+    {/* Sign out action */}
+    <div className="ml-4 shrink-0">
+      <LogoutButton />
+    </div>
+
+    </div>
+    </header>
 
       <section className="mx-auto max-w-6xl px-6 py-12">
         <p className="font-medium text-emerald-800">
           YOUR GROWTH JOURNEY
         </p>
-
+        
         <WelcomeMessage fullName={fullName} />
    
         <div className="mt-8 flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
@@ -83,7 +97,7 @@ export default async function DashboardPage() {
             className="mt-3 inline-flex items-center gap-2 rounded-lg bg-emerald-800 px-4 py-2 text-sm font-medium text-white transition hover:bg-emerald-900"
             >
             View profile
-            <span aria-hidden="true">→</span>
+            <span aria-hidden="true"></span>
             </Link>
         </div>
         </div>

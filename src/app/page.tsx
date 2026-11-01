@@ -1,3 +1,5 @@
+import Navbar from "@/components/navbar";
+
 const programmes = [
   {
     number: "01",
@@ -40,56 +42,7 @@ const programmes = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <header className="border-b border-slate-100">
-        
-
-<nav className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-  {/* Website logo */}
-  <a
-    href="#"
-    className="text-lg font-extrabold tracking-tight text-emerald-900 sm:text-2xl"
-  >
-    PURPOSELY GLOBAL<span className="text-amber-500">.</span>
-  </a>
-
-  {/* Desktop navigation: hidden on mobile */}
-  <div className="hidden items-center gap-6 text-sm font-medium md:flex">
-    <a href="/about" className="hover:text-emerald-700">About</a>
-    <a href="/programmes" className="hover:text-emerald-700">Programmes</a>
-    <a href="/academy" className="hover:text-emerald-700">Learning Academy</a>
-    <a href="/community" className="hover:text-emerald-700">Community</a>
-    <a href="/partnerships" className="hover:text-emerald-700">Partnerships</a>
-  </div>
-
-  {/* Desktop Get involved button */}
-  <a
-    href="#get-involved"
-    className="hidden rounded-full bg-emerald-900 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-800 md:inline-flex"
-  >
-    Get involved
-  </a>
-
-  {/* Mobile menu: visible only on mobile */}
-  <details className="group relative shrink-0 md:hidden">
-    <summary className="flex cursor-pointer list-none items-center gap-2 rounded-lg border border-emerald-900 px-3 py-2 text-sm font-semibold text-emerald-900">
-      Menu <span aria-hidden="true">☰</span>
-    </summary>
-
-    <div className="absolute right-0 top-full z-50 mt-3 w-64 rounded-xl border border-slate-200 bg-white p-3 shadow-xl">
-      <a href="/about" className="block rounded-lg px-4 py-3 text-sm hover:bg-emerald-50">About</a>
-      <a href="/programmes" className="block rounded-lg px-4 py-3 text-sm hover:bg-emerald-50">Programmes</a>
-      <a href="/academy" className="block rounded-lg px-4 py-3 text-sm hover:bg-emerald-50">Learning Academy</a>
-      <a href="/community" className="block rounded-lg px-4 py-3 text-sm hover:bg-emerald-50">Community</a>
-      <a href="/partnerships" className="block rounded-lg px-4 py-3 text-sm hover:bg-emerald-50">Partnerships</a>
-      <a href="/get-involved" className="mt-2 block rounded-lg bg-emerald-900 px-4 py-3 text-center text-sm font-semibold text-white hover:bg-emerald-800">
-        Get involved
-      </a>
-    </div>
-  </details>
-</nav>
-
-
-      </header>
+      <Navbar />
 
       <section className="relative overflow-hidden bg-emerald-950 text-white">
         <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-emerald-800/40 blur-3xl" />

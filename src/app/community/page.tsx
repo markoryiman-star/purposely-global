@@ -1,4 +1,5 @@
 
+import Navbar from "@/components/navbar";
 import Link from "next/link";
 import { WHATSAPP_CHANNEL_LINK } from "@/lib/links";
 
@@ -32,24 +33,7 @@ const communityValues = [
 export default function CommunityPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <header className="border-b border-slate-200">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <Link
-            href="/"
-            className="text-lg font-extrabold tracking-tight text-emerald-900 sm:text-2xl"
-          >
-            PURPOSELY GLOBAL
-            <span className="text-amber-500">.</span>
-          </Link>
-
-          <Link
-            href="/"
-            className="rounded-full border border-emerald-900 px-4 py-2 text-sm font-semibold text-emerald-900 transition hover:bg-emerald-50"
-          >
-            Back to home
-          </Link>
-        </nav>
-      </header>
+      <Navbar />
 
       <section className="bg-emerald-950 px-6 py-20 text-white md:py-28">
         <div className="mx-auto max-w-7xl">
