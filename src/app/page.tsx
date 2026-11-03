@@ -44,65 +44,74 @@ export default function Home() {
     <main className="min-h-screen bg-white text-slate-900">
       <Navbar />
 
-      <section className="relative overflow-hidden bg-emerald-950 text-white">
-        <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-emerald-800/40 blur-3xl" />
+      
+<section className="relative overflow-hidden bg-emerald-950 text-white">
+  <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-emerald-800/40 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-24 md:grid-cols-2 md:items-center md:py-32">
-          <div>
-            <p className="mb-6 text-sm font-bold uppercase tracking-[0.2em] text-amber-400">
-              Growth must be deliberate
-            </p>
+  <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 sm:py-20 md:grid-cols-2 md:items-center md:gap-12 md:py-28 lg:py-32">
+    {/* Hero introduction */}
+    <div>
+      <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-amber-400 sm:mb-6 sm:text-sm">
+        Growth must be deliberate
+      </p>
 
-            
-<h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-  Building People of Impact
-</h1>
-<p className="mt-4 text-xl font-semibold text-emerald-100">
-  Become who you are meant to be. Intentionally.
-</p>
+      <h1 className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+        Building People of Impact
+      </h1>
 
+      <p className="mt-4 text-lg font-semibold text-emerald-100 sm:text-xl">
+        Become who you are meant to be. Intentionally.
+      </p>
 
-            <p className="mt-7 max-w-xl text-lg leading-8 text-emerald-100">
-              PURPOSELY builds people of impact by helping them grow with
-              intention, develop discipline, and turn their potential into
-              meaningful action.
-            </p>
+      <p className="mt-6 max-w-xl text-base leading-7 text-emerald-100 sm:mt-7 sm:text-lg sm:leading-8">
+        PURPOSELY builds people of impact by helping them grow with
+        intention, develop discipline, and turn their potential into
+        meaningful action.
+      </p>
 
-            <div className="mt-9 flex flex-wrap gap-4">
-              <a
-                href="#programmes"
-                className="rounded-full bg-amber-400 px-7 py-4 font-bold text-emerald-950 transition hover:bg-amber-300"
-              >
-                Start your growth journey →
-              </a>
-              <a
-                href="#about"
-                className="rounded-full border border-emerald-700 px-7 py-4 font-semibold text-white transition hover:bg-emerald-900"
-              >
-                Discover PURPOSELY
-              </a>
-            </div>
-          </div>
+      {/* Call-to-action buttons */}
+      <div className="mt-8 flex flex-col gap-4 sm:mt-9 sm:flex-row sm:flex-wrap">
+        <a
+          href="#programmes"
+          className="inline-flex w-full items-center justify-center rounded-full bg-amber-400 px-7 py-4 text-center font-bold text-emerald-950 transition hover:bg-amber-300 sm:w-auto"
+        >
+          Start your growth journey →
+        </a>
 
-          <div className="rounded-3xl border border-emerald-800 bg-emerald-900/60 p-8 sm:p-10">
-            <p className="text-sm font-semibold uppercase tracking-widest text-amber-400">
-              Our guiding principle
-            </p>
-            <p className="mt-6 text-3xl font-bold leading-snug sm:text-4xl">
-              Everything With Intentionality.
-            </p>
-            <div className="my-8 h-px bg-emerald-700" />
-            <p className="text-lg leading-8 text-emerald-100">
-              We believe growth is not left to chance. It is cultivated
-              through deliberate decisions, consistent action, and a
-              commitment to becoming better.
-            </p>
-            <p className="mt-8 text-sm font-semibold text-amber-400">
-              THINK INTENTIONALLY. GROW DELIBERATELY. LIVE PURPOSEFULLY.
-            </p>
-          </div>
-        </div>
-      </section>
+        <a
+          href="#about"
+          className="inline-flex w-full items-center justify-center rounded-full border border-emerald-700 px-7 py-4 text-center font-semibold text-white transition hover:bg-emerald-900 sm:w-auto"
+        >
+          Discover PURPOSELY
+        </a>
+      </div>
+    </div>
+
+    {/* Guiding principle card */}
+    <div className="rounded-3xl border border-emerald-800 bg-emerald-900/60 p-6 sm:p-8 lg:p-10">
+      <p className="text-xs font-semibold uppercase tracking-widest text-amber-400 sm:text-sm">
+        Our guiding principle
+      </p>
+
+      <p className="mt-5 text-2xl font-bold leading-snug sm:mt-6 sm:text-3xl lg:text-4xl">
+        Everything With Intentionality.
+      </p>
+
+      <div className="my-6 h-px bg-emerald-700 sm:my-8" />
+
+      <p className="text-base leading-7 text-emerald-100 sm:text-lg sm:leading-8">
+        We believe growth is not left to chance. It is cultivated
+        through deliberate decisions, consistent action, and a
+        commitment to becoming better.
+      </p>
+
+      <p className="mt-6 text-xs font-semibold leading-6 text-amber-400 sm:mt-8 sm:text-sm">
+        THINK INTENTIONALLY. GROW DELIBERATELY. LIVE PURPOSEFULLY.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       <section id="about" className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <p className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-800">
@@ -134,7 +143,7 @@ export default function Home() {
             into consistent action and measurable progress.
           </p>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 sm:gap-6 lg:mt-12 lg:grid-cols-3">
             {programmes.map((programme) => (
               <article
                 key={programme.number}
