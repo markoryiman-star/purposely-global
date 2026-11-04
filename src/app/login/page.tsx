@@ -1,4 +1,3 @@
-
 "use client";
 
 import { FormEvent, useState } from "react";
@@ -102,6 +101,15 @@ export default function LoginPage() {
               className="w-full rounded-lg border border-slate-300 px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none focus:border-emerald-700 focus:ring-2 focus:ring-emerald-100"
               placeholder="Enter your password"
             />
+
+            <div className="mt-2 text-right">
+              <Link
+                href="/forgot-password"
+                className="text-sm font-semibold text-emerald-800 hover:underline"
+              >
+                Forgot Password?
+              </Link>
+            </div>
           </div>
 
           {error && (
@@ -123,7 +131,7 @@ export default function LoginPage() {
         </form>
 
         <p className="mt-6 text-center text-sm text-slate-600">
-            Don't have an account?{" "}
+          Don't have an account?{" "}
           <Link
             href="/register"
             className="font-semibold text-emerald-800 hover:underline"
